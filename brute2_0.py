@@ -6,12 +6,12 @@ import re
 from timeit import default_timer as timer
 from Cryptodome.Cipher import AES
 
-cipher_text_hex = 'ba260dd8bcaf261d228c9b74992d20dd4ed9d24c3f7cdb6777849da517f76c781e91dbea7c70739c3823df769386ebc0a90a1d1489de71490b38dc037000600f'
+cipher_text_hex = '439e14e426ea5d4839e49f3d57b5e8355247ed39511b1629b50dfe576a7b935824ca1749bca9bc7007b441da588b3865f5d7489e058e9f9120e9f646f5c62076'
 cipher_text = binascii.unhexlify(cipher_text_hex)
 passwords = []
-iterations = '65'  # Установите значение итераций
+iterations = '87'  # Установите значение итераций
 text_size = '35'  # Установите размер текста
-sequence = 'GpflXJOl5w425hf5'
+sequence = 'fK63Hs9IqiM8q2j4'
 
 def decrypt_message(cipher_text, key):
     aes = AES.new(key, AES.MODE_ECB)
@@ -60,7 +60,7 @@ def seq(sequences):
 def main():
     x = 0
 
-    sequences = generate_all_sequences(list(sequence), 16)
+    sequences = generate_all_sequences(list(sequence), 10)
     while x == 0:     
         start = timer()
         #seq(index, A,B,sequences)
